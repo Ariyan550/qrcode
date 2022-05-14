@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Qr Code Generator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="qrCodeContent">
+        <div class="qrCodeHeader">
+          <h2>Qr Code Generator</h2>
+          <p>Paste a url or enter text to generate qr code</p>
+        </div>
+        <div class="qrCodeBody">
+          <input type="text" placeholder="Enter text or url" />
+          <button>Generate Qr Code</button>
+        </div>
+        <div class="qrCodeFooter">
+          <div class="qrcodeimg">
+            <div class="loadAnimation">
+              <img src="loading.gif" alt="network connection error!" />
+            </div>
+            <img class="genQr" src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="setting">
+      <i onclick="settingToggle()" class="fa fa-gear"></i>
+      <div class="menu">
+        <ul>
+          <li><button onclick="darkFun()">Dark Mode</button></li>
+          <li><button onclick="scannerFun()">Qr Code scanner</button></li>
+          <li><button onclick="downloadFun()">Download Qr image</a></li>
+          <li><button onclick="saveBrowserFun()">Save qr data</button></li>
+          <li><button onclick="listSavedQrData()">Your qr data</button></li>
+          <li><button onclick="aboutFun()">About</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="showTips tipOne">
+      <i title="close" onclick="tipOneClose()" class="fa fa-close"></i>
+      <p>
+        if you need qr code <br />
+        scanner just click setting icon up left and select qr code scanner
+      </p>
+    </div>
+
+    <div class="showTips tipTwo">
+      <i title="close" onclick="tipTwoClose()" class="fa fa-close"></i>
+      <p>
+        if you download qr code image so simply press and hold qr code image and
+        download it pc user just mouse right click and save image.
+      </p>
+    </div>
+
+    <div class="popup">
+      <p>Please wait...</p>
+    </div>
+
+    <footer>
+      <p>This Qr Code App Development By Ariyan Rumi</p>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100006095925909"
+            ><i class="fa-brands fa-facebook"></i> Facebook</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Ariyan550"
+            ><i class="fa-brands fa-github"></i> Github</a
+          >
+        </li>
+      </ul>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
