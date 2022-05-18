@@ -16,6 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="scanner.css" />
     <title>Qr Code Generator</title>
   </head>
   <body>
@@ -44,11 +45,9 @@
       <i onclick="settingToggle()" class="fa fa-gear"></i>
       <div class="menu">
         <ul>
-          <li><button onclick="darkFun()">Dark Mode</button></li>
-          <li><button onclick="scannerFun()"><a href="scanner/index.html">Qr code scanner</a></button></li>
-          <li><button onclick="downloadFun()">Download Qr image</a></li>
-          <li><button onclick="saveBrowserFun()">Save qr data</button></li>
-          <li><button onclick="listSavedQrData()">Your qr data</button></li>
+          <li>
+            <button onclick="scannerFun()">Qr code scanner</button>
+          </li>
           <li><button onclick="aboutFun()">About</button></li>
         </ul>
       </div>
@@ -74,6 +73,26 @@
       <p>Please wait...</p>
     </div>
 
+    <div class="popupScanner">
+      <div class="wrapper2">
+        <form action="#">
+          <input type="file" hidden />
+          <img src="#" alt="qr-code" />
+          <div class="content">
+            <i class="fas fa-cloud-upload"></i>
+            <p>Upload QR Code to Read</p>
+          </div>
+        </form>
+        <div class="details">
+          <textarea spellcheck="false" disabled></textarea>
+          <div class="buttons">
+            <button class="close">Close</button>
+            <button class="copy">Copy Text</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <p>This Qr Code App Development By Ariyan Rumi</p>
       <ul>
@@ -89,10 +108,8 @@
         </li>
       </ul>
     </footer>
- 
 
     <script src="index.js"></script>
+    <script src="scanner.js"></script>
   </body>
 </html>
-
-

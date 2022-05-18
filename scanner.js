@@ -1,4 +1,4 @@
-const wrapper = document.querySelector(".wrapper"),
+const wrapper2 = document.querySelector(".wrapper2"),
 form = document.querySelector("form"),
 fileInp = form.querySelector("input"),
 infoText = form.querySelector("p"),
@@ -15,7 +15,7 @@ function fetchRequest(file, formData) {
         if(!result) return;
         document.querySelector("textarea").innerText = result;
         form.querySelector("img").src = URL.createObjectURL(file);
-        wrapper.classList.add("active");
+        wrapper2.classList.add("active");
     }).catch(() => {
         infoText.innerText = "Couldn't scan QR Code";
     });
@@ -35,4 +35,11 @@ copyBtn.addEventListener("click", () => {
 });
 
 form.addEventListener("click", () => fileInp.click());
-closeBtn.addEventListener("click", () => wrapper.classList.remove("active"));
+closeBtn.addEventListener("click", () => wrapper2.classList.remove("active"));
+
+
+function scannerFun(){
+    let popup =document.querySelector('.popupScanner')
+    popup.classList.toggle('showpopup')
+
+}

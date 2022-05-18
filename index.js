@@ -69,7 +69,7 @@ function settingToggle (){
 }
 
 
-
-// read qr code
-
-// https://api.qrserver.com/v1/read-qr-code/
+const aboutFun=()=>{
+    const footer =document.querySelector('footer')
+    footer.classList.toggle('active')
+}
